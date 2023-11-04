@@ -5,6 +5,12 @@ app.get('/status', function (req,res){
     res.send('Hello nodejs server eiei')
 })
 
+app.get('/hello/:person', function(req,res){
+    console.log('hello - '+req.params.person)
+    res.send('say hello with '+req.params.person)
+})
+
+
 let port = 8081
 
 app.listen(port, function(){
